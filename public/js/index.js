@@ -11,3 +11,21 @@ socket.on('disconnect', function () {
 socket.on('newMessage', function (msg){
   console.log('NewMessage', msg); //name of the event.
 });
+
+socket.emit('createMessage', {
+  from:'Frank',
+  text:'Hi'
+}, function (data) {
+  console.log('Got it', data);
+});
+
+jQuery('#message-form').on('submit', function(e){
+  e.preventDefault();
+
+  socket.emit('createMessage', {
+    from: 'User',
+    text: jQuery('[name=message]').val()
+  }, function(){
+
+  });
+});

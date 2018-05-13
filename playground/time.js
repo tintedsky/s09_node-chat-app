@@ -7,3 +7,6 @@ var moment = require('moment');
 
 var date = moment();
 console.log(date.subtract(147, 'days').format('dddd DDD MMM DD, Y h:mm a'));
+
+var someTimestamp = moment().valueOf();
+console.log(someTimestamp);

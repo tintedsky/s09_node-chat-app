@@ -14,8 +14,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "socket.io": "^2.1.0",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "moment": "^2.22.1",
+    "socket.io": "^2.1.0"
   },
   "devDependencies": {
     "expect": "^1.20.2",

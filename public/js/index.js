@@ -48,7 +48,6 @@ locationButton.on('click', function () {
   }
 
   locationButton.attr('disabled', 'disabled').text('Sending location...');
-
   navigator.geolocation.getCurrentPosition(function(position){
     locationButton.removeAttr('disabled').text('Send location');
     socket.emit('createLocationMessage', {
